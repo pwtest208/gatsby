@@ -80,7 +80,9 @@ export const eslintConfig = (
         "react/react-in-jsx-scope": usingAutomaticJsxRuntime ? `off` : `error`,
         "import/no-webpack-loader-syntax": [0],
         "graphql/template-strings": [
-          `error`,
+          process.env.GATSBY_GRAPHQL_NESTED_SORT_AND_AGGREGATE
+            ? `warn`
+            : `error`,
           {
             env: `relay`,
             schemaString: printSchema(schema, { commentDescriptions: true }),

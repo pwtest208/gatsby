@@ -234,6 +234,16 @@ const activeFlags: Array<IFlag> = [
     testFitness: (): fitnessEnum => false,
     requires: `As of gatsby@4.15.0 this feature is available as a config option inside gatsby-config. Learn more at https://gatsby.dev/graphql-typegen`,
   },
+  {
+    name: `GRAPHQL_NESTED_SORT_AND_AGGREGATE`,
+    env: `GATSBY_GRAPHQL_NESTED_SORT_AND_AGGREGATE`,
+    command: `all`,
+    telemetryId: `GraphQLNestedSortAndAggregate`,
+    description: `Change enums used to define sorting and aggregation to nested input objects. This lowers memory usage and improve schema building performance.`,
+    umbrellaIssue: `TBD`,
+    experimental: true,
+    testFitness: (): fitnessEnum => true,
+  },
 ]
 
 export default activeFlags
