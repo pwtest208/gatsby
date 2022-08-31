@@ -9,7 +9,7 @@
   "scripts": {
     "build": "babel src --out-dir dist/ --ignore \"**/__tests__\" --ignore \"**/__mocks__\" --extensions \".ts\"",
     "typegen": "tsc --emitDeclarationOnly --declaration --declarationDir dist/",
-    "prepare": "cross-env NODE_ENV=production npm run clean && npm run build && npm run typegen",
+    "prepare": "cross-env NODE_ENV=production npm run clean && npm run build",
     "watch": "babel -w src --out-dir dist/ --ignore \"**/__tests__\" --extensions \".ts,.tsx\"",
     "test": "jest",
     "clean": "del-cli dist/*"
